@@ -191,16 +191,16 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 // Skriv koden for oppgave 6 her
 
 const arrayManipulator3000 = (array) => {
-  const newArray = array.slice(1);
+  array.shift();
 
-  const index = newArray.indexOf("Viskelær");
+  const index = array.indexOf("Viskelær");
   if (index !== -1) {
-    newArray[index] = "Linjal";
+    array[index] = "Linjal";
   }
 
-  newArray.splice(0, 2, "Markeringspenn");
+  array.splice(0, 2, "Markeringspenn");
 
-  const finalString = newArray.join(" | ");
+  const finalString = array.join(" | ");
 
   return finalString;
 };
